@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-lg-2" style="height: 100vh;">
+      <div class="row" style="height: 5vh;">teste 1</div>
+      <div class="row" style="height: 95vh;">teste 2</div>
+    </div>
+    <div class="col-md-10 col-lg-10" style="height: 100vh;">
+      <div class="row" style="height: 15vh;">
+        <h1>Techpost</h1>
+      </div>
+      <div class="row" style="height: 80vh;">
+        <ul>
+        <% @posts.each do |post| %>
+          <li><%=link_to post.titulo, post_path(post) %> <%=link_to 'Deletar', post_path(post.id), method: :delete, class: 'del' %> | <%= post.answers.count %></li>
+        <%end%>
+        </ul>
+      </div>
+      <div class="row" style="height: 5vh;">
+      <%= link_to 'Create a post', new_post_path, class: "btn btn-primary"%>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+<%= simple_form_for [@post, @rating, @answer] do |f|%>
+<%= f.input :description, label: 'Description'%>
+<%= f.submit 'Answer this rating', class: 'btn btn-primary'%>
+<%end%>
