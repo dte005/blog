@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :find_post, only: %i[show destroy edit update]
   def index
-    @posts = Post.all
+    params[:filter].blank? ? @posts = Post.all : @posts = Post.where("titulo LIKE ?", "%#{params[:filter]}%")
   end
 
   def show

@@ -1,7 +1,13 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2 col-lg-2" style="height: 100vh;">
-      <div class="row" style="height: 5vh;">teste 1</div>
+      <div class="row" style="height: 5vh;">
+        <form action="/posts" method="get">
+          <input type="text" name="filter">
+          <input type="submit" name="search" value="Search">
+        </form>
+
+      </div>
       <div class="row" style="height: 95vh;">teste 2</div>
     </div>
     <div class="col-md-10 col-lg-10" style="height: 100vh;">
